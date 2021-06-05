@@ -1,0 +1,17 @@
+{
+  "name": "@next-monorep/server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"yarn run mobile-app\" \"yarn run desktop-app\" \"nodemon app.js\"",
+    "desktop-app": "cd ../desktop-app && yarn run next build && yarn run next start -p 9008",
+    "mobile-app": "cd ../mobile-app && yarn run next build && yarn run next start -p 9009"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "http-proxy": "^1.18.1",
+    "mobile-detect": "^1.4.5",
+    "nodemon": "^2.0.7"
+  }
+}

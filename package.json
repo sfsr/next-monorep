@@ -1,0 +1,10 @@
+{
+  "name": "next-monorep",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "packages/server/app.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
